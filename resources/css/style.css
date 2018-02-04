@@ -12,6 +12,24 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
 header {
   position: fixed;
   width: 100%;
@@ -67,6 +85,10 @@ header h4 .name {
 }
 
 @media only screen and (max-width: 760px) {
+  header .content {
+    flex-direction: row;
+  }
+
   header .desktop {
     display: none;
   }
@@ -91,4 +113,186 @@ header h4 .name {
     height: 2.5rem;
   }
 
+}
+
+main-content {
+  position: relative;
+  top: 4rem;
+}
+
+
+.section {
+  width: 100%;
+  padding-bottom: 2rem;
+  background-color: gray;
+}
+
+.content {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.right {
+  margin-top: 2rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  width: 60%;
+  background-color: pink;
+}
+
+.left {
+  margin-top: 2rem;
+  width: 40%;
+  background-color: lightblue;
+}
+
+.banner {
+  width: 80%;
+}
+
+.card {
+  display: flex;
+}
+
+.card-left {
+  padding: 1rem 1rem;
+  width: 35%
+}
+
+.card-right {
+  padding-right: 1rem;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card .mobile {
+  display: none;
+}
+
+.card h5 {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+
+.reference {
+  font-weight: bold;
+}
+
+.new-everyday img {
+  display: block;
+  max-width: 100%;
+}
+
+.new-everyday .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.new-everyday h1 {
+  padding-bottom: 1rem;
+}
+
+.new-everyday h3 {
+  padding-bottom: 2rem;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: brown;
+  color: white;
+  text-align: center;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+.keep-practicing img {
+  display: block;
+  max-width: 100%;
+}
+
+.keep-practicing .right {
+  display: flex;
+  flex-direction: column;
+}
+
+.keep-practicing .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.keep-practicing h2 {
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+h5.reference-quote {
+  padding-bottom: 1.5rem;
+}
+
+
+@media only screen and (max-width: 760px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .new-everyday .right {
+    margin: 0;
+    width: 100%;
+  }
+
+  .new-everyday .left {
+    width: 100%;
+  }
+
+  .banner {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: auto;
+  }
+
+  .new-everyday h1 {
+    padding-bottom: 2rem;
+  }
+
+  .new-everyday h3 {
+    padding-bottom: 1.5rem;
+  }
+
+   .keep-practicing .right {
+     display: none;
+   }
+
+   .keep-practicing .left {
+     width: 100%;
+   }
+
+   .card {
+     flex-direction: column;
+     padding: 1rem 1rem 2rem 1rem;
+   }
+
+   .card .desktop {
+     display: none;
+   }
+
+   .card .mobile {
+     display: block;
+   }
+
+  .card-left {
+    padding: 0;
+    width: 100%;
+  }
+
+  .card-right {
+    padding: 0;
+    padding-top: 2rem;
+    width: 100%;
+  }
 }
