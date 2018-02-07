@@ -235,6 +235,84 @@ h5.reference-quote {
   padding-bottom: 1.5rem;
 }
 
+h5.reference {
+  padding-bottom: 2rem;
+}
+
+.start-learning {
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+}
+
+.start-learning .card {
+  flex-direction: column;
+  background-color: white;
+  margin-right: 2rem;
+}
+
+.start-learning .card-bottom {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+.start-learning h5.course {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+.start-learning img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.start-learning h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.thesis-exhibit img {
+  display: block;
+  max-width: 100%;
+}
+
+.thesis-exhibit .vdo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.thesis-exhibit .right {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.thesis-exhibit .left {
+  display: flex;
+  flex-direction: column;
+}
+
+.thesis-exhibit h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.thesis-exhibit h2 {
+  padding-top: 1.5rem;
+  padding-bottom: .5rem;
+}
+
+.thesis-exhibit h5 {
+  padding-bottom: 2rem;
+}
 
 @media only screen and (max-width: 760px) {
   .content {
@@ -270,6 +348,23 @@ h5.reference-quote {
 
    .keep-practicing .left {
      width: 100%;
+   }
+
+   .thesis-exhibit h1 {
+     padding-bottom: 1rem;
+   }
+
+   .thesis-exhibit .right {
+     margin: 0;
+     width: 100%;
+   }
+
+   .thesis-exhibit h2, h5 {
+     display: none;
+   }
+
+   .thesis-exhibit .left {
+     display: none;
    }
 
    .card {
