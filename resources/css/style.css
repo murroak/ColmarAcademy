@@ -113,6 +113,10 @@ header h4 .name {
     height: 2.5rem;
   }
 
+  footer .desktop {
+    display: none;
+  }
+
 }
 
 main-content {
@@ -120,10 +124,36 @@ main-content {
   top: 4rem;
 }
 
+footer {
+  position: relative;
+  top: 4rem;
+  font-size: 1rem;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+
+}
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-right {
+  display: block;
+}
+
+.footer-right ul {
+  display: flex;
+  align-items: center;
+}
+
+.footer-right li {
+  padding-left: 1rem;
+}
 
 .section {
   width: 100%;
-  padding-bottom: 2rem;
+  /*padding-bottom: 2rem;*/
   background-color: gray;
 }
 
@@ -138,7 +168,7 @@ main-content {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   width: 60%;
-  background-color: pink;
+  /*background-color: pink;*/
 }
 
 .left {
@@ -223,7 +253,7 @@ main-content {
 .keep-practicing .left {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .keep-practicing h2 {
@@ -239,21 +269,27 @@ h5.reference {
   padding-bottom: 2rem;
 }
 
-.start-learning {
-    padding-left: 4.5rem;
-    padding-right: 4.5rem;
+.start-learning .content {
+  padding-left: 4.5rem;
+  padding-right: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap:   wrap;
+  align-content: center;
+  justify-content: center;
 }
 
 .start-learning .card {
   flex-direction: column;
   background-color: white;
   margin-right: 2rem;
+  margin-bottom: 2rem;
+  max-width: 30%
+  /*width: auto;*/
 }
 
 .start-learning .card-bottom {
-  padding-top: 1rem;
-  padding-left: 1rem;
-  padding-bottom: 1.5rem;
+  padding: 1rem 1rem 1.5rem 1rem;
 }
 
 .start-learning h5.course {
@@ -315,8 +351,25 @@ h5.reference {
 }
 
 @media only screen and (max-width: 760px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  .section {
+    padding: 0;
+  }
+
   .content {
+    margin: 0;
     flex-direction: column;
+  }
+
+  .left {
+    margin: 0;
   }
 
   .new-everyday .right {
@@ -329,8 +382,7 @@ h5.reference {
   }
 
   .banner {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 2rem 1rem 2rem 1rem;
     width: auto;
   }
 
@@ -350,7 +402,59 @@ h5.reference {
      width: 100%;
    }
 
+   .keep-practicing img {
+     display: block;
+     width: 100%;
+   }
+
+   .keep-practicing .card-right {
+     margin-left: 1rem;
+   }
+
+   .start-learning {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+   }
+
+   .start-learning h1 {
+     font-size: 4rem;
+     padding: 0;
+     padding-bottom: 1rem;
+   }
+
+   .start-learning .content {
+     margin: 0;
+     padding: 0;
+     flex-direction: column;
+     width: 100%;
+   }
+
+   .start-learning .card {
+     margin: 0 1rem .5rem 1rem;
+     padding: 0;
+     background-color: white;
+     max-width: 100%;
+   }
+
+   .start-learning .card-top {
+     display: none;
+   }
+
+   .start-learning .card-bottom {
+      padding: 1.5rem 1rem 1.5rem 1rem;
+      justify-content: center;
+   }
+
+   .start-learning h5 {
+     display: none;
+   }
+
+   .thesis-exhibit {
+     padding-bottom: 1.5rem;
+   }
+
    .thesis-exhibit h1 {
+     font-size: 4rem;
      padding-bottom: 1rem;
    }
 
@@ -359,7 +463,7 @@ h5.reference {
      width: 100%;
    }
 
-   .thesis-exhibit h2, h5 {
+   .thesis-exhibit h2, .thesis-exhibit h5 {
      display: none;
    }
 
@@ -370,6 +474,17 @@ h5.reference {
    .card {
      flex-direction: column;
      padding: 1rem 1rem 2rem 1rem;
+   }
+
+   .card h5 {
+     font-size: 1.5rem;
+     padding-top: .75rem;
+     padding-bottom: .75rem;
+   }
+
+   .card a {
+     font-size: 1.5rem;
+     color: blue;
    }
 
    .card .desktop {
