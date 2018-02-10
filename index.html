@@ -5,6 +5,7 @@
     <title>Colmar Academy</title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
     <link href="https://fonts.googleapis.com/css?family=Anton|Dosis:400,700|Oswald:400,700|Share+Tech+Mono" rel="stylesheet">
+    <link rel="icon" href="./resources/images/ic-logo-transparent.ico" type="image/x-icon">
     <link rel="stylesheet" href="./resources/css/reset.css">
     <link rel="stylesheet" href="./resources/css/style.css">
   </head>
@@ -184,7 +185,12 @@
                 <i class="fa fa-play-circle fa-5x"></i>
               </a>
               <script>
-                document.getElementById('playVid').onclick = function () {document.getElementById('video').play(); document.getElementById('playVid').style.visibility = "hidden";};
+                document.getElementById('playVid').onclick = function () {
+                  document.getElementById('video').play(); 
+                  document.getElementById('playVid').style.visibility = "hidden";
+                  document.getElementById('video').addEventListener('ended',vidHandler,false);
+                  function vidHandler(e) {document.getElementById('playVid').style.visibility = "visible";}
+                };
               </script>
             </div>
             <h2>Reimagine urban</h2>
