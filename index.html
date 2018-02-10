@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Colmar Academy</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Dosis:400,700|Oswald:400,700|Share+Tech+Mono" rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/reset.css">
     <link rel="stylesheet" href="./resources/css/style.css">
   </head>
@@ -16,7 +18,7 @@
             <ul>
               <li><a href="#"></a>On Campus</li>
               <li><a href="#"></a>Online</li>
-              <li><a href="#"></a>or companies</li>
+              <li><a href="#"></a>For companies</li>
               <li><a href="#"></a>Sign in</li>
             </ul>
           </nav>
@@ -174,9 +176,17 @@
         <h1>Thesis exhibit</h1>
         <div class="content">
           <div class="right">
-            <video class="vdo" autoplay loop>
-              <source src="./resources/videos/thesis.mp4" type="video/mp4">
-            </video>
+            <div class="vdo-container">
+              <video class="vdo" id="video">
+                <source src="./resources/videos/thesis.mp4" type="video/mp4" alt="Video of modern city building">
+              </video>
+              <a href="javascript:void(0)" id="playVid">
+                <i class="fa fa-play-circle fa-5x"></i>
+              </a>
+              <script>
+                document.getElementById('playVid').onclick = function () {document.getElementById('video').play(); document.getElementById('playVid').style.visibility = "hidden";};
+              </script>
+            </div>
             <h2>Reimagine urban</h2>
             <h5 class="reference-quote">"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula."</h5>
           </div> <!-- end right section -->

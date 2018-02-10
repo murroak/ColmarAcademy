@@ -3,7 +3,7 @@ body {
 }
 
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: "Dosis", sans-serif;
   font-size: 16px;
 }
 
@@ -13,28 +13,29 @@ a {
 }
 
 h1 {
+  font-family: "Oswald", sans-serif;
   font-size: 2.5rem;
   font-weight: bold;
   line-height: 1.1;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: bold;
   line-height: 1.1;
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 header {
   position: fixed;
   width: 100%;
   border-bottom: solid 1px black;
-  background-color: white;
+  background: linear-gradient(yellow,goldenrod);
   z-index: 10;
 }
 
@@ -61,9 +62,12 @@ nav li {
     font-size: 1.2rem;
 }
 
+nav li:hover {
+  font-weight: bold;
+}
+
 nav a {
   vertical-align: center;
-
 }
 
 header .logo {
@@ -84,7 +88,7 @@ header h4 .name {
   color: black;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 780px) {
   header .content {
     flex-direction: row;
   }
@@ -151,10 +155,12 @@ footer {
   padding-left: 1rem;
 }
 
+.footer-right li:hover {
+  font-weight: bold;
+}
+
 .section {
   width: 100%;
-  /*padding-bottom: 2rem;*/
-  background-color: gray;
 }
 
 .content {
@@ -168,13 +174,11 @@ footer {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   width: 60%;
-  /*background-color: pink;*/
 }
 
 .left {
   margin-top: 2rem;
   width: 40%;
-  background-color: lightblue;
 }
 
 .banner {
@@ -183,6 +187,14 @@ footer {
 
 .card {
   display: flex;
+}
+
+.card a {
+  color: blue;
+}
+
+.card h5 {
+  font-size: 1.1rem;
 }
 
 .card-left {
@@ -212,6 +224,11 @@ footer {
   font-weight: bold;
 }
 
+.new-everyday {
+  background-color: #696969;
+  padding-bottom: 2rem;
+}
+
 .new-everyday img {
   display: block;
   max-width: 100%;
@@ -232,17 +249,35 @@ footer {
 }
 
 .button {
-  border-radius: 4px;
-  background-color: brown;
-  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: #ddae1c;
+  color: black;
   text-align: center;
   padding-top: .5rem;
   padding-bottom: .5rem;
 }
 
+.button:hover {
+  background-color: #7dbad8;
+}
+
+.keep-practicing {
+  background-color: #8d7f74;
+}
+
 .keep-practicing img {
   display: block;
   max-width: 100%;
+}
+
+.keep-practicing .card {
+  margin-bottom: .5rem;
+}
+
+.keep-practicing .card:hover {
+  background-color: #eeeeee;
 }
 
 .keep-practicing .right {
@@ -269,6 +304,10 @@ h5.reference {
   padding-bottom: 2rem;
 }
 
+.start-learning {
+  background-color: #b7b9ad;
+}
+
 .start-learning .content {
   padding-left: 4.5rem;
   padding-right: 2.5rem;
@@ -281,11 +320,14 @@ h5.reference {
 
 .start-learning .card {
   flex-direction: column;
-  background-color: white;
+  background-color: #eeeeee;
   margin-right: 2rem;
   margin-bottom: 2rem;
   max-width: 30%
-  /*width: auto;*/
+}
+
+.start-learning .card:hover {
+  background-color: #7dbad8;
 }
 
 .start-learning .card-bottom {
@@ -293,7 +335,8 @@ h5.reference {
 }
 
 .start-learning h5.course {
-  padding-top: .5rem;
+  font-family: "Share Tech Mono", monospace;
+  padding-top: 1rem;
   padding-bottom: .5rem;
 }
 
@@ -311,6 +354,14 @@ h5.reference {
   text-align: center;
 }
 
+.thesis-exhibit .right {
+  margin-top: 0;
+}
+
+.thesis-exhibit .left {
+  margin-top: 0;
+}
+
 .thesis-exhibit img {
   display: block;
   max-width: 100%;
@@ -326,6 +377,15 @@ h5.reference {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+}
+
+.thesis-exhibit .card {
+  background-color: #eeeeee;
+  margin-bottom: .5rem;
+}
+
+.thesis-exhibit .card:hover {
+  background-color: #7dbad8;
 }
 
 .thesis-exhibit .left {
@@ -350,7 +410,22 @@ h5.reference {
   padding-bottom: 2rem;
 }
 
-@media only screen and (max-width: 760px) {
+.vdo-container {
+  position: relative;
+}
+
+#playVid {
+  display: inline-block;
+  position: absolute;
+  left: 45%;
+  bottom: 35%;
+}
+
+#playVid {
+  color: lightsteelblue;
+}
+
+@media only screen and (max-width: 780px) {
   h1 {
     font-size: 4rem;
   }
@@ -394,106 +469,117 @@ h5.reference {
     padding-bottom: 1.5rem;
   }
 
-   .keep-practicing .right {
+  .keep-practicing .right {
      display: none;
-   }
+  }
 
-   .keep-practicing .left {
-     width: 100%;
-   }
+  .keep-practicing .left {
+   width: 100%;
+  }
 
-   .keep-practicing img {
-     display: block;
-     width: 100%;
-   }
+  .keep-practicing img {
+   display: block;
+   width: 100%;
+  }
 
-   .keep-practicing .card-right {
+ .keep-practicing .card-right {
      margin-left: 1rem;
-   }
+  }
 
-   .start-learning {
+ .start-learning {
       padding-top: 2rem;
       padding-bottom: 2rem;
-   }
+  }
 
-   .start-learning h1 {
+  .start-learning h1 {
      font-size: 4rem;
      padding: 0;
      padding-bottom: 1rem;
-   }
+  }
 
-   .start-learning .content {
+  .start-learning .content {
      margin: 0;
      padding: 0;
      flex-direction: column;
      width: 100%;
-   }
+  }
 
-   .start-learning .card {
+  .start-learning .card {
      margin: 0 1rem .5rem 1rem;
      padding: 0;
-     background-color: white;
+     background-color: #b7b9ad;
      max-width: 100%;
-   }
+  }
 
-   .start-learning .card-top {
+  .start-learning .card:hover {
+    background-color: #b7b9ad;
+  }
+
+  .start-learning .card-top {
      display: none;
-   }
+  }
 
-   .start-learning .card-bottom {
-      padding: 1.5rem 1rem 1.5rem 1rem;
+  .start-learning .card-bottom {
+      padding: 1.5rem 1rem 1.5rem 3rem;
       justify-content: center;
-   }
+      background-color: #ebcf11;
+      border-radius: 10% / 30%;
+  }
 
-   .start-learning h5 {
+  .start-learning .card-bottom:hover {
+    background-color: #7dbad8;
+  }
+
+  .start-learning h5 {
      display: none;
-   }
+  }
 
-   .thesis-exhibit {
-     padding-bottom: 1.5rem;
-   }
+  .thesis-exhibit {
+    background-color: white;
+    padding-bottom: 1.5rem;
+  }
 
-   .thesis-exhibit h1 {
+  .thesis-exhibit h1 {
      font-size: 4rem;
      padding-bottom: 1rem;
-   }
+  }
 
-   .thesis-exhibit .right {
+  .thesis-exhibit .right {
      margin: 0;
      width: 100%;
-   }
+  }
 
-   .thesis-exhibit h2, .thesis-exhibit h5 {
+  .thesis-exhibit h2, .thesis-exhibit h5 {
      display: none;
-   }
+  }
 
-   .thesis-exhibit .left {
+  .thesis-exhibit .left {
      display: none;
-   }
+  }
 
-   .card {
+  .card {
      flex-direction: column;
      padding: 1rem 1rem 2rem 1rem;
-   }
+  }
 
-   .card h5 {
+  .card h5 {
      font-size: 1.5rem;
      padding-top: .75rem;
      padding-bottom: .75rem;
-   }
+  }
 
-   .card a {
+  .card a {
      font-size: 1.5rem;
      color: blue;
-   }
+  }
 
-   .card .desktop {
+  .card .desktop {
      display: none;
-   }
+  }
 
-   .card .mobile {
+  .card .mobile {
      display: block;
-   }
+  }
 
   .card-left {
     padding: 0;
